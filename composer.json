@@ -1,0 +1,36 @@
+{
+  "name": "goodwillaz/servicenow",
+  "description": "ServiceNow API Connector",
+  "minimum-stability": "stable",
+  "license": "MPL-2.0",
+  "authors": [
+    {
+      "name": "Matt Zuba",
+      "email": "matt.zuba@goodwillaz.org"
+    }
+  ],
+  "require": {
+    "php": "^5.6",
+    "guzzlehttp/guzzle-services": "^1.1",
+    "kamermans/guzzle-oauth2-subscriber": "^1.0"
+  },
+  "require-dev": {
+    "illuminate/support": "^5.4",
+    "psy/psysh": "^0.9.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "ServiceNow\\": "src"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "ServiceNow\\LaravelServiceProvider"
+      ]
+    }
+  }
+}

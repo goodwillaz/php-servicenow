@@ -1,0 +1,91 @@
+{
+  "operations": {
+    "listRecords": {
+      "httpMethod": "GET",
+      "uri": "table/{table}",
+      "responseModel": "getResponse",
+      "parameters": {
+        "table": {
+          "type": "string",
+          "location": "uri"
+        }
+      },
+      "additionalParameters": {
+        "location": "query"
+      }
+    },
+    "createRecord": {
+      "httpMethod": "POST",
+      "uri": "table/{table}",
+      "responseModel": "getResponse",
+      "parameters": {
+        "table": {
+          "type": "string",
+          "location": "uri"
+        }
+      },
+      "additionalParameters": {
+        "location": "json"
+      }
+    },
+    "getRecord": {
+      "httpMethod": "GET",
+      "uri": "table/{table}/{sysId}",
+      "responseModel": "getResponse",
+      "parameters": {
+        "table": {
+          "type": "string",
+          "location": "uri"
+        },
+        "sysId": {
+          "type": "string",
+          "location": "uri"
+        }
+      },
+      "additionalParameters": {
+        "location": "query"
+      }
+    },
+    "updateRecord": {
+      "httpMethod": "PUT",
+      "uri": "table/{table}/{sysId}",
+      "responseModel": "getResponse",
+      "parameters": {
+        "table": {
+          "type": "string",
+          "location": "uri"
+        },
+        "sysId": {
+          "type": "string",
+          "location": "uri"
+        }
+      },
+      "additionalParameters": {
+        "location": "json"
+      }
+    },
+    "deleteRecord": {
+      "httpMethod": "DELETE",
+      "uri": "table/{table}/{sysId}",
+      "responseModel": "getResponse",
+      "parameters": {
+        "table": {
+          "type": "string",
+          "location": "uri"
+        },
+        "sysId": {
+          "type": "string",
+          "location": "uri"
+        }
+      }
+    }
+  },
+  "models": {
+    "getResponse": {
+      "type": "object",
+      "additionalProperties": {
+        "location": "json"
+      }
+    }
+  }
+}
